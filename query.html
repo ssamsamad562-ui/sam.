@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>There was a one person in CEC called SHarath A one of c man in their whole group He was very G Boy and his Hobbies are singing a song dinging a dong <br>
+        When You see this guy No 1 BS guy and He very talketive which are almost useless And there is another person called Samad, crazy Boy  
+    </p>
+    <!-- Same class with 2 types of heading, 3 - h1, 1 - h2 -->
+    <h1 class="class-heading">This story  confirmed by sam</h1>
+    <h1 class="class-heading">This is the main story</h1>
+    <h1 class="class-heading">story of an c boy</h1>
+    <h2 class="class-heading">story of g boy</h2>
+    <h1 id="id-heading">this is the college story</h1>
+
+    <script>
+
+    var normalHeading = document.getElementsByTagName("h1");
+    console.log(normalHeading);
+    normalHeading[0].innerHTML = "<i> story was craeted by <u>kevin</u></i>";
+
+    var classHeading = document.getElementsByClassName("class-heading");
+        // innerText will render the text content
+        // If we use getElementsByClassName, it will return the collection (because class can be repeated)
+    console.log(classHeading);
+    classHeading[1].innerText = "story reconfirmed by shardha"
+
+
+     var idHeading = document.getElementById("id-heading");
+     console.log(idHeading);
+     idHeading.style.color = "red";
+     idHeading.style.textAlign = "center";
+     idHeading.style.fontSize = "50px";
+     idHeading.style.backgroundColor = "lightblue";
+     idHeading.style.borderWidth = "20px";
+     idHeading.style.borderStyle = "ridge";
+     idHeading.style.borderColor = "yellow";
+
+     var headingWithClass = document.querySelector("h1.class-heading");
+// If we use querySelector, it will return the single item (it will target the first found item)
+    console.log(headingWithClass);
+    headingWithClass.style.padding = "20px";
+    headingWithClass.style.border = "1px solid black";
+
+     var headingWithSameClass = document.querySelectorAll("h1.class-heading");
+        console.log(headingWithSameClass);
+        headingWithSameClass[2].style.margin = "10px";
+        headingWithSameClass[2].style.backgroundColor = "chocolate";
+        headingWithSameClass[2].style.color = "white";
+
+
+     
+    </script>
+
+</body>
+</html>
+
+<!-- DOM :- Document object model -->
+    <!-- Selectors: Tarfgeting the elements -->
+     <!-- getElementById, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll -->
